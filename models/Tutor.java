@@ -1,6 +1,6 @@
 package ilovepet.models;
 
-public class Tutor extends Pessoa {
+public class Tutor extends Usuario {
 
     public Tutor(String name, int age) {
         super(name, age);

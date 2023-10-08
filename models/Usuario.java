@@ -1,10 +1,10 @@
 package ilovepet.models;
 
-public abstract class Pessoa {
+public abstract class Usuario {
     private String name;
     private int age;
-
-    public Pessoa(String name, int age) {
+    
+    public Usuario(String name, int age) {
         this.name = name;
         this.age = age;
     }

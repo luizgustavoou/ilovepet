@@ -1,10 +1,20 @@
 package ilovepet.models;
 
-public class PrestadorServicos extends Pessoa {
+public class PrestadorServicos extends Usuario {
 
-    public PrestadorServicos(String name, int age) {
+    private String[] especialidades;
+    
+    public PrestadorServicos(String name, int age, String[] especialidades) {
         super(name, age);
-        //TODO Auto-generated constructor stub
+        this.especialidades = especialidades;
+    }
+
+    public String[] getEspecialidades() {
+        return especialidades;
+    }
+
+    public void setEspecialidades(String[] especialidades) {
+        this.especialidades = especialidades;
     }
 
 }
