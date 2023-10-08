@@ -1,8 +1,11 @@
 package ilovepet.repositories;
 
+import java.util.ArrayList;
+
 import ilovepet.models.PrestadorServicos;
 
-public class PrestadorServicoRepository extends Repository<PrestadorServicos> {
+public class PrestadorServicoRepository implements IRepository<PrestadorServicos> {
+    private ArrayList<PrestadorServicos> prestadoresServico = new ArrayList<PrestadorServicos>();
 
     private static PrestadorServicoRepository instance;
 
@@ -15,6 +18,21 @@ public class PrestadorServicoRepository extends Repository<PrestadorServicos> {
         }
 
         return instance;
+    }
+
+    @Override
+    public void add(PrestadorServicos prestadorServicos) {
+        this.prestadoresServico.add(prestadorServicos);
+    }
+
+    @Override
+    public void remove(PrestadorServicos PrestadorServicos) {
+        this.prestadoresServico.remove(PrestadorServicos);
+    }
+
+    @Override
+    public ArrayList<PrestadorServicos> getAll() {
+        return this.prestadoresServico;
     }
 
 }

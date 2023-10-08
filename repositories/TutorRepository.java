@@ -1,8 +1,11 @@
 package ilovepet.repositories;
 
+import java.util.ArrayList;
+
 import ilovepet.models.Tutor;
 
-public class TutorRepository extends Repository<Tutor> {
+public class TutorRepository implements IRepository<Tutor> {
+    private ArrayList<Tutor> Tutores = new ArrayList<Tutor>();
 
     private static TutorRepository instance;
 
@@ -15,6 +18,21 @@ public class TutorRepository extends Repository<Tutor> {
         }
 
         return instance;
+    }
+
+    @Override
+    public void add(Tutor tutor) {
+        this.Tutores.add(tutor);
+    }
+
+    @Override
+    public void remove(Tutor tutor) {
+        this.Tutores.remove(tutor);
+    }
+
+    @Override
+    public ArrayList<Tutor> getAll() {
+        return this.Tutores;
     }
 
 }
