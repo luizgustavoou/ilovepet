@@ -11,10 +11,11 @@ Ações no Sistema: Pode se cadastrar no sistema, fornecer informações sobre s
  */
 public class Tutor extends Usuario {
     private ArrayList<Animal> animaisEstimacao;
-
+    
     public Tutor(String name, int age, ArrayList<Animal> animaisEstimacao) {
         super(name, age);
         this.animaisEstimacao = animaisEstimacao;
+        
     }
 
     public ArrayList<Animal> getAnimaisEstimacao() {

@@ -12,13 +12,16 @@ Ações no Sistema: Pode se cadastrar no sistema, fornecer informações sobre s
  */
 public class PrestadorServicos extends Usuario {
 
-    // TODO: Acho que nao tem sentido a classe PrestadorServicos ter um atributo animais. Ja que ele apenas vai receber em algum metodo um animal e fazer algo com ele, como alimentar, passear e etc.
-    private ArrayList<Animal> animais;
+    // TODO: Acho que nao tem sentido a classe PrestadorServicos ter um atributo
+    // animais. Ja que ele apenas vai receber em algum metodo um animal e fazer algo
+    // com ele, como alimentar, passear e etc.
+    
+    // private ArrayList<Animal> animais;
     private ArrayList<String> especialidades;
 
-    public PrestadorServicos(String name, int age, ArrayList<Animal> animais, ArrayList<String> especialidades) {
+    public PrestadorServicos(String name, int age, ArrayList<String> especialidades) {
         super(name, age);
-        this.animais = animais;
+        // this.animais = animais;
         this.especialidades = especialidades;
     }
 
@@ -30,13 +33,13 @@ public class PrestadorServicos extends Usuario {
         this.especialidades = especialidades;
     }
 
-    public ArrayList<Animal> getAnimais() {
-        return animais;
-    }
+    // public ArrayList<Animal> getAnimais() {
+    // return animais;
+    // }
 
-    public void setAnimais(ArrayList<Animal> animais) {
-        this.animais = animais;
-    }
+    // public void setAnimais(ArrayList<Animal> animais) {
+    // this.animais = animais;
+    // }
 
     public void adicionarEspecialidade(String especialidade) {
         this.especialidades.add(especialidade);
