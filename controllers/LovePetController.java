@@ -21,23 +21,23 @@ public class LovePetController {
         this.vendedorRepository = VendedorRepository.getInstance();
     }
 
-    public void addPrestadorServico(String name, int age) { // ok
+    public void addPrestadorServico(String name, int age) { 
         PrestadorServicos prestadorServicos = new PrestadorServicos(name, age);
 
         this.prestadorServicoRepository.add(prestadorServicos);
     }
 
-    public void addTutor(String name, int age) {
+    public void addTutor(String name, int age) { 
         Tutor tutor = new Tutor(name, age);
         tutorRepository.add(tutor);
     }
 
-    public void addVendedor(String name, int age) { // ok
+    public void addVendedor(String name, int age) { 
         Vendedor tutor = new Vendedor(name, age);
         vendedorRepository.add(tutor);
     }
 
-    public void addEspecialidadePrestadorServico(String name, int age, String novaEspecialidade) { // ok
+    public void addEspecialidadePrestadorServico(String name, int age, String novaEspecialidade) { 
         for (PrestadorServicos prestadorServicos : this.prestadorServicoRepository.getAll()) {
             if (prestadorServicos.getName() == name && prestadorServicos.getAge() == age) {
                 prestadorServicos.adicionarEspecialidade(novaEspecialidade);
@@ -50,7 +50,7 @@ public class LovePetController {
         }
     }
 
-    public void addAnimacaoEstimacaoTutor(String name, int age, Animal animal) {
+    public void addAnimacaoEstimacaoTutor(String name, int age, Animal animal) { 
         for (Tutor tutor : this.tutorRepository.getAll()) {
             if (tutor.getName() == name && tutor.getAge() == age) {
                 tutor.addAnimalEstimacao(animal);
@@ -62,15 +62,15 @@ public class LovePetController {
         }
     }
 
-    public void relatorioPrestadorServico() { // ok
+    public void relatorioPrestadorServico() { 
         System.out.println(this.prestadorServicoRepository.getAll().toString());
     }
 
-    public void relatorioTutor() { // ok
+    public void relatorioTutor() { 
         System.out.println(this.tutorRepository.getAll().toString());
     }
 
-    public void relatorioVendedor() { // ok
+    public void relatorioVendedor() { 
         System.out.println(this.vendedorRepository.getAll().toString());
     }
 
