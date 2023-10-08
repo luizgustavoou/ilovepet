@@ -1,8 +1,8 @@
 package ilovepet.models;
 
-public class Mouse extends Animal {
+public class Rato extends Animal {
 
-    public Mouse(String name, int age) {
+    public Rato(String name, int age) {
         super(name, age);
         //TODO Auto-generated constructor stub
     }
