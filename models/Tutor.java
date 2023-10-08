@@ -2,7 +2,6 @@ package ilovepet.models;
 
 import java.util.ArrayList;
 
-
 /*
  * Tutor de Animal de Estimação:
 
@@ -11,11 +10,11 @@ Ações no Sistema: Pode se cadastrar no sistema, fornecer informações sobre s
  */
 public class Tutor extends Usuario {
     private ArrayList<Animal> animaisEstimacao;
-    
+
     public Tutor(String name, int age, ArrayList<Animal> animaisEstimacao) {
         super(name, age);
         this.animaisEstimacao = animaisEstimacao;
-        
+
     }
 
     public ArrayList<Animal> getAnimaisEstimacao() {
@@ -28,6 +27,22 @@ public class Tutor extends Usuario {
 
     public void addAnimalEstimacao(Animal animal) {
         this.animaisEstimacao.add(animal);
+    }
+
+    @Override
+    public String toString() {
+        String retorno = "PrestadorServicos{" +
+                "name=" + this.getName() +
+                ", age='" + this.getAge() + '\'' + ", animaisEstimacao=[";
+
+        for (Animal animal : this.animaisEstimacao) {
+            retorno += animal.toString() + ", ";
+        }
+
+        retorno += "]";
+        retorno += '}';
+
+        return retorno;
     }
 
 }

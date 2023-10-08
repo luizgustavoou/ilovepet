@@ -49,4 +49,20 @@ public class PrestadorServicos extends Usuario {
         this.especialidades.remove(especialidade);
     }
 
+    @Override
+    public String toString() {
+        String retorno = "PrestadorServicos{" +
+                "name=" + this.getName() +
+                ", age='" + this.getAge() + '\'' + ", especialidades=[";
+        
+        for(String especialidade : this.especialidades) {
+            retorno += especialidade + ", ";
+        }
+
+        retorno += "]";
+        retorno += '}';
+
+        return retorno;
+    }
+
 }
