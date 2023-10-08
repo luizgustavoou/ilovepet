@@ -1,11 +1,8 @@
 package ilovepet.repositories;
 
-import java.util.ArrayList;
-
 import ilovepet.models.Vendedor;
 
-public class VendedorRepository {
-    private ArrayList<Vendedor> vendedores = new ArrayList<Vendedor>();
+public class VendedorRepository extends Repository<Vendedor> {
 
     private static VendedorRepository instance;
 
@@ -18,18 +15,6 @@ public class VendedorRepository {
         }
 
         return instance;
-    }
-
-    public void add(Vendedor vendedor) {
-        this.vendedores.add(vendedor);
-    }
-
-    public void remove(Vendedor vendedor) {
-        this.vendedores.remove(vendedor);
-    }
-
-    public ArrayList<Vendedor> getAll() {
-        return this.vendedores;
     }
 
 }
