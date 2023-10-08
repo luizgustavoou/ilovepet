@@ -37,7 +37,7 @@ public class Tutor extends Usuario {
 
     @Override
     public String toString() {
-        String retorno = "PrestadorServicos{" +
+        String retorno = "Tutor{" +
                 "name=" + this.getName() +
                 ", age='" + this.getAge() + '\'' + ", animaisEstimacao=[";
 
