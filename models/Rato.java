@@ -15,5 +15,13 @@ public class Rato extends Animal {
     void eat() {
         System.out.println("Rato comendo...");
     }
+
+    @Override
+    public String toString() {
+        return "Rato{" +
+                "name=" + this.getName() +
+                ", age='" + this.getAge() + '\'' +
+                '}';
+    }
     
 }

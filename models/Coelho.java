@@ -15,5 +15,13 @@ public class Coelho extends Animal{
     void eat() {
         System.out.println("Coelho comendo...");
     }
+
+    @Override
+    public String toString() {
+        return "Coelho{" +
+                "name=" + this.getName() +
+                ", age='" + this.getAge() + '\'' +
+                '}';
+    }
     
 }

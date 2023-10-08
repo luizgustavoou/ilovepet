@@ -16,4 +16,12 @@ public class Cachorro extends Animal {
         System.out.println("Cachorro comendo...");
     }
     
+    @Override
+    public String toString() {
+        return "Cachorro{" +
+                "name=" + this.getName() +
+                ", age='" + this.getAge() + '\'' +
+                '}';
+    }
+    
 }
