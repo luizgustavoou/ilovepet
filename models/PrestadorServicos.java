@@ -37,6 +37,12 @@ public class PrestadorServicos extends Usuario {
         this.animais = animais;
     }
 
-   
+    public void adicionarEspecialidade(String especialidade) {
+        this.especialidades.add(especialidade);
+    }
+
+    public void removerEspecialidade(String especialidade) {
+        this.especialidades.remove(especialidade);
+    }
 
 }
