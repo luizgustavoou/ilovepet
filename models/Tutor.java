@@ -1,12 +1,21 @@
 package ilovepet.models;
 
-public class Tutor extends Usuario {
+import java.util.ArrayList;
 
-    public Tutor(String name, int age) {
+public class Tutor extends Usuario {
+    private ArrayList<Animal> animaisEstimacao;
+
+    public Tutor(String name, int age, ArrayList<Animal> animaisEstimacao) {
         super(name, age);
-        //TODO Auto-generated constructor stub
+        this.animaisEstimacao = animaisEstimacao;
     }
 
+    public ArrayList<Animal> getAnimaisEstimacao() {
+        return animaisEstimacao;
+    }
 
-    
+    public void setAnimaisEstimacao(ArrayList<Animal> animaisEstimacao) {
+        this.animaisEstimacao = animaisEstimacao;
+    }
+
 }
