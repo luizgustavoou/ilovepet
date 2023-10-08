@@ -62,4 +62,10 @@ public class LovePetController {
         }
     }
 
+    public void relatorioPrestadorServico() {
+        System.out.println(this.prestadorServicoRepository.getAll().toString());
+    }
+
+
+
 }
