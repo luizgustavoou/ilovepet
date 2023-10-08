@@ -25,4 +25,12 @@ public abstract class Usuario {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "name=" + this.getName() +
+                ", age='" + this.getAge() + '\'' +
+                '}';
+    }
+
 }
