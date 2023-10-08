@@ -17,6 +17,12 @@ public class Tutor extends Usuario {
 
     }
 
+    public Tutor(String name, int age) {
+        super(name, age);
+        this.animaisEstimacao = new ArrayList<Animal>();
+
+    }
+
     public ArrayList<Animal> getAnimaisEstimacao() {
         return animaisEstimacao;
     }

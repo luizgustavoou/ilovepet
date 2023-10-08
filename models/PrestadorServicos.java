@@ -25,6 +25,12 @@ public class PrestadorServicos extends Usuario {
         this.especialidades = especialidades;
     }
 
+    public PrestadorServicos(String name, int age) {
+        super(name, age);
+        // this.animais = animais;
+        this.especialidades = new ArrayList<String>();
+    }
+
     public ArrayList<String> getEspecialidades() {
         return especialidades;
     }

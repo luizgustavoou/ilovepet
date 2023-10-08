@@ -21,8 +21,8 @@ public class LovePetController {
         this.vendedorRepository = VendedorRepository.getInstance();
     }
 
-    public void addPrestadorServico(String name, int age, ArrayList<String> especialidades) {
-        PrestadorServicos prestadorServicos = new PrestadorServicos(name, age, especialidades);
+    public void addPrestadorServico(String name, int age) {
+        PrestadorServicos prestadorServicos = new PrestadorServicos(name, age);
 
         this.prestadorServicoRepository.add(prestadorServicos);
     }
