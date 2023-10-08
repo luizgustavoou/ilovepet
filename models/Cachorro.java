@@ -10,13 +10,13 @@ public class Cachorro extends Animal {
     @Override
     void walk() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'walk'");
+        System.out.println("Cachorro andando...");
     }
 
     @Override
     void eat() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'eat'");
+        System.out.println("Cachorro comendo...");
     }
     
 }
