@@ -12,6 +12,7 @@ Ações no Sistema: Pode se cadastrar no sistema, fornecer informações sobre s
  */
 public class PrestadorServicos extends Usuario {
 
+    // TODO: Acho que nao tem sentido a classe PrestadorServicos ter um atributo animais. Ja que ele apenas vai receber em algum metodo um animal e fazer algo com ele, como alimentar, passear e etc.
     private ArrayList<Animal> animais;
     private ArrayList<String> especialidades;
 
