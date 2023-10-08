@@ -37,18 +37,6 @@ public class PrestadorServicos extends Usuario {
         this.animais = animais;
     }
 
-    public void venderBrinquedo() {
-        System.out.println("Vendi um brinquedo");
-    }
-
-    public void venderAlimento() {
-        System.out.println("Vendi um alimento");
-
-    }
-
-    public void venderAcessorio() {
-        System.out.println("Vendi um acessorio");
-
-    }
+   
 
 }
