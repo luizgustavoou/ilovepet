@@ -37,4 +37,17 @@ public class LovePetController {
         vendedorRepository.add(tutor);
     }
 
+    public void addEspecialidadePrestadorServico(String name, int age, String novaEspecialidade) {
+        for (PrestadorServicos prestadorServicos : this.prestadorServicoRepository.getAll()) {
+            if (prestadorServicos.getName() == name && prestadorServicos.getAge() == age) {
+                prestadorServicos.adicionarEspecialidade(novaEspecialidade);
+                break;
+            }
+
+        }
+
+    }
+
+    
+
 }
