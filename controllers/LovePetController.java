@@ -66,6 +66,14 @@ public class LovePetController {
         System.out.println(this.prestadorServicoRepository.getAll().toString());
     }
 
+    public void relatorioTutor() {
+        System.out.println(this.tutorRepository.getAll().toString());
+    }
+
+    public void relatorioVendedor() {
+        System.out.println(this.vendedorRepository.getAll().toString());
+    }
+
 
 
 }
