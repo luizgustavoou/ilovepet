@@ -26,4 +26,8 @@ public class Tutor extends Usuario {
         this.animaisEstimacao = animaisEstimacao;
     }
 
+    public void addAnimalEstimacao(Animal animal) {
+        this.animaisEstimacao.add(animal);
+    }
+
 }

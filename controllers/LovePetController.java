@@ -41,13 +41,25 @@ public class LovePetController {
         for (PrestadorServicos prestadorServicos : this.prestadorServicoRepository.getAll()) {
             if (prestadorServicos.getName() == name && prestadorServicos.getAge() == age) {
                 prestadorServicos.adicionarEspecialidade(novaEspecialidade);
+
+                System.out.println("Especialidade do prestador de serviço " + name + "adicionado com sucesso.");
+
                 break;
             }
 
         }
-
     }
 
-    
+    public void addAnimacaoEsimaçaoTutor(String name, int age, Animal animal) {
+        for (Tutor tutor : this.tutorRepository.getAll()) {
+            if (tutor.getName() == name && tutor.getAge() == age) {
+                tutor.addAnimalEstimacao(animal);
+
+                System.out.println("Animal de estimação do " + name + "adicionado com sucesso.");
+                break;
+            }
+
+        }
+    }
 
 }
