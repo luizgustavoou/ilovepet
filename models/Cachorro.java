@@ -25,11 +25,11 @@ public class Cachorro extends Animal {
     @Override
     void eat(Food food) {
         int energy = getEnergy();
-        if (energy <= 2) {
+        if (energy <= 100) {
             System.out.println("Cachorro comendo...");
-            setEnergy(energy + 1);
+            setEnergy(energy + food.getNutrition());
         } else
-            System.out.println("Cachorro já teve 2 refeições!");
+            System.out.println("Cachorro já está cheio de refeições!");
     }
 
     @Override

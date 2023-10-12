@@ -25,11 +25,11 @@ public class Rato extends Animal {
     @Override
     void eat(Food food) {
         int energy = getEnergy();
-        if (energy <= 3) {
+        if (energy <= 100) {
             System.out.println("Rato comendo...");
-            setEnergy(energy + 1);
+            setEnergy(energy + food.getNutrition());
         } else
-            System.out.println("Rato já teve 3 refeições!");
+            System.out.println("Rato já está cheio de refeições!");
     }
 
     @Override

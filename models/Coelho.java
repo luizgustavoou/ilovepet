@@ -25,11 +25,11 @@ public class Coelho extends Animal {
     @Override
     void eat(Food food) {
         int energy = getEnergy();
-        if (energy <= 1) {
+        if (energy <= 100) {
             System.out.println("Coelho comendo...");
-            setEnergy(energy + 1);
+            setEnergy(energy + food.getNutrition());
         } else
-            System.out.println("Coelho já teve sua refeição!");
+            System.out.println("Coelho já está cheio de refeições!");
     }
 
     @Override
