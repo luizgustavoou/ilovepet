@@ -2,6 +2,7 @@ package ilovepet.repositories;
 
 import java.util.ArrayList;
 
+import ilovepet.models.Animal;
 import ilovepet.models.Tutor;
 
 public class TutorRepository implements IRepository<Tutor> {
@@ -33,6 +34,26 @@ public class TutorRepository implements IRepository<Tutor> {
     @Override
     public ArrayList<Tutor> getAll() {
         return this.Tutores;
+    }
+
+    public Tutor addAnimacaoEstimacaoTutor(int id, Animal animal) {
+        Tutor tutor = null;
+
+        for (Tutor tu : this.getAll()) {
+            if (tu.getId() == id) {
+                tutor = tu;
+                break;
+            }
+
+        }
+
+        if (tutor instanceof Tutor) {
+            tutor.addAnimalEstimacao(animal);
+
+        }
+
+        return tutor;
+
     }
 
 }

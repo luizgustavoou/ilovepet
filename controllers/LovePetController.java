@@ -44,26 +44,26 @@ public class LovePetController {
     }
 
     public void addEspecialidadePrestadorServico(int id, String novaEspecialidade) {
-        for (PrestadorServicos prestadorServicos : this.prestadorServicoRepository.getAll()) {
-            if (prestadorServicos.getId() == id) {
-                prestadorServicos.adicionarEspecialidade(novaEspecialidade);
+        PrestadorServicos prestadorServicos = prestadorServicoRepository.addEspecialidadePrestadorServico(id,
+                novaEspecialidade);
 
-                System.out.println("Especialidade do prestador de serviço " + prestadorServicos.getName() + " adicionado com sucesso.");
-
-                break;
-            }
+        if (prestadorServicos == null) {
+            System.out.println("Prestador de serviço com id=" + id + " não encontrado.");
+        } else {
+            System.out.println("Especialidade do prestador de serviço " + prestadorServicos.getName()
+                    + " adicionado com sucesso.");
 
         }
     }
 
     public void addAnimacaoEstimacaoTutor(int id, Animal animal) {
-        for (Tutor tutor : this.tutorRepository.getAll()) {
-            if (tutor.getId() == id) {
-                tutor.addAnimalEstimacao(animal);
+        Tutor tutor = tutorRepository.addAnimacaoEstimacaoTutor(id, animal);
 
-                System.out.println("Animal de estimação do " + tutor.getName() + " adicionado com sucesso.");
-                break;
-            }
+        if (tutor == null) {
+            System.out.println("Tutor com id=" + id + " não encontrado.");
+        } else {
+            System.out.println("Animal de estimação do tutor " + tutor.getName()
+                    + " adicionado com sucesso.");
 
         }
     }
