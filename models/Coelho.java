@@ -13,7 +13,13 @@ public class Coelho extends Animal{
 
     @Override
     void eat() {
-        System.out.println("Coelho comendo...");
+        int quantMeals = getQuantityMeals();
+        if(quantMeals <= 1) {
+            System.out.println("Coelho comendo...");
+            setQuantityMeals(quantMeals + 1);
+        }
+        else
+            System.out.println("Coelho já teve sua refeição!");
     }
 
     @Override

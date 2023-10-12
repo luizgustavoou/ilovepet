@@ -1,12 +1,23 @@
 package ilovepet.models;
 
 public abstract class Animal {
+    private int id;
     private String name;
     private int age;
+    private int quantityMeals = 0;
 
-    public Animal(String name, int age) {
+    public Animal(int id, String name, int age) {
+        this.it = id;
         this.name = name;
         this.age = age;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -23,6 +34,14 @@ public abstract class Animal {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getQuantityMeals() {
+        return quantityMeals;
+    }
+
+    public void setQuantityMeals(int quantityMeals) {
+        this.quantityMeals = quantityMeals;
     }
 
     abstract void walk();

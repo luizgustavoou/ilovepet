@@ -13,7 +13,13 @@ public class Rato extends Animal {
 
     @Override
     void eat() {
-        System.out.println("Rato comendo...");
+        int quantMeals = getQuantityMeals();
+        if(quantMeals <= 3) {
+            System.out.println("Rato comendo...");
+            setQuantityMeals(quantMeals + 1);
+        }
+        else
+            System.out.println("Rato já teve 3 refeições!");
     }
 
     @Override
