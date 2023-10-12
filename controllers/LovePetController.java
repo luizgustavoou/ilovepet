@@ -21,20 +21,26 @@ public class LovePetController {
         this.vendedorRepository = VendedorRepository.getInstance();
     }
 
-    public void addPrestadorServico(String name, int age) {
+    public int addPrestadorServico(String name, int age) {
         PrestadorServicos prestadorServicos = new PrestadorServicos(name, age);
 
         this.prestadorServicoRepository.add(prestadorServicos);
+
+        return prestadorServicos.getId();
     }
 
-    public void addTutor(String name, int age) {
+    public int addTutor(String name, int age) {
         Tutor tutor = new Tutor(name, age);
         tutorRepository.add(tutor);
+
+        return tutor.getId();
     }
 
-    public void addVendedor(String name, int age) {
-        Vendedor tutor = new Vendedor(name, age);
-        vendedorRepository.add(tutor);
+    public int addVendedor(String name, int age) {
+        Vendedor vendedor = new Vendedor(name, age);
+        vendedorRepository.add(vendedor);
+
+        return vendedor.getId();
     }
 
     public void addEspecialidadePrestadorServico(String name, int age, String novaEspecialidade) {
@@ -50,12 +56,12 @@ public class LovePetController {
         }
     }
 
-    public void addAnimacaoEstimacaoTutor(String name, int age, Animal animal) {
+    public void addAnimacaoEstimacaoTutor(int id, Animal animal) {
         for (Tutor tutor : this.tutorRepository.getAll()) {
-            if (tutor.getName() == name && tutor.getAge() == age) {
+            if (tutor.getId() == id) {
                 tutor.addAnimalEstimacao(animal);
 
-                System.out.println("Animal de estimação do " + name + " adicionado com sucesso.");
+                System.out.println("Animal de estimação do " + tutor.getName() + " adicionado com sucesso.");
                 break;
             }
 
