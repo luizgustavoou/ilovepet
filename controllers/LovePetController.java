@@ -1,7 +1,9 @@
 package ilovepet.controllers;
 
 import ilovepet.models.Animal;
+import ilovepet.models.Food;
 import ilovepet.models.PrestadorServicos;
+import ilovepet.models.Sausage;
 import ilovepet.models.Tutor;
 import ilovepet.models.Vendedor;
 import ilovepet.repositories.PrestadorServicoRepository;
@@ -21,26 +23,26 @@ public class LovePetController {
         this.vendedorRepository = VendedorRepository.getInstance();
     }
 
-    public int addPrestadorServico(String name, int age) {
+    public PrestadorServicos addPrestadorServico(String name, int age) {
         PrestadorServicos prestadorServicos = new PrestadorServicos(name, age);
 
         this.prestadorServicoRepository.add(prestadorServicos);
 
-        return prestadorServicos.getId();
+        return prestadorServicos;
     }
 
-    public int addTutor(String name, int age) {
+    public Tutor addTutor(String name, int age) {
         Tutor tutor = new Tutor(name, age);
         tutorRepository.add(tutor);
 
-        return tutor.getId();
+        return tutor;
     }
 
-    public int addVendedor(String name, int age) {
+    public Vendedor addVendedor(String name, int age) {
         Vendedor vendedor = new Vendedor(name, age);
         vendedorRepository.add(vendedor);
 
-        return vendedor.getId();
+        return vendedor;
     }
 
     public void addEspecialidadePrestadorServico(int id, String novaEspecialidade) {
@@ -66,6 +68,30 @@ public class LovePetController {
                     + " adicionado com sucesso.");
 
         }
+    }
+
+    public void alimentarAnimalPrestadorServico(int idPrestadorServico, Animal animal, Food food) {
+        PrestadorServicos prestadorServicos = this.prestadorServicoRepository.getById(idPrestadorServico);
+
+        if (prestadorServicos == null) {
+            System.out.println("Prestador de serviço não encontrado para alimentar o animal " + animal.getName() + ".");
+            return;
+        }
+
+        prestadorServicos.alimentarAnimal(animal, food);
+
+    }
+
+    public void passearAnimalPrestadorServico(int idPrestadorServico, Animal animal) {
+        PrestadorServicos prestadorServicos = this.prestadorServicoRepository.getById(idPrestadorServico);
+
+        if (prestadorServicos == null) {
+            System.out.println("Prestador de serviço não encontrado para passear.");
+            return;
+        }
+
+        prestadorServicos.caminharComAnimal(animal);
+
     }
 
     public void relatorioPrestadorServico() {

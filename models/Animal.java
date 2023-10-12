@@ -5,10 +5,10 @@ public abstract class Animal {
     private int age;
     private int energy = 0;
 
-    public Animal( String name, int age) {
+    public Animal(String name, int age) {
         this.name = name;
         this.age = age;
-        this.energy = 0;
+        this.energy = 100;
     }
 
     public String getName() {
@@ -35,10 +35,8 @@ public abstract class Animal {
         this.energy = energy;
     }
 
-    abstract void walk();
+    abstract public void walk();
 
-    abstract void eat(Food food);
-
-
+    abstract public void eat(Food food);
 
 }

@@ -2,7 +2,9 @@ package ilovepet.repositories;
 
 import java.util.ArrayList;
 
+import ilovepet.models.Animal;
 import ilovepet.models.PrestadorServicos;
+import ilovepet.models.Tutor;
 
 public class PrestadorServicoRepository implements IRepository<PrestadorServicos> {
     private ArrayList<PrestadorServicos> prestadoresServico = new ArrayList<PrestadorServicos>();
@@ -28,6 +30,20 @@ public class PrestadorServicoRepository implements IRepository<PrestadorServicos
     @Override
     public void remove(PrestadorServicos PrestadorServicos) {
         this.prestadoresServico.remove(PrestadorServicos);
+    }
+
+    public PrestadorServicos getById(int id) {
+        PrestadorServicos prestadorServicos = null;
+
+        for (PrestadorServicos ps : this.getAll()) {
+            if (ps.getId() == id) {
+                prestadorServicos = ps;
+                break;
+            }
+
+        }
+
+        return prestadorServicos;
     }
 
     @Override

@@ -44,14 +44,6 @@ public class PrestadorServicos extends Usuario {
         this.especialidades = especialidades;
     }
 
-    // public ArrayList<Animal> getAnimais() {
-    // return animais;
-    // }
-
-    // public void setAnimais(ArrayList<Animal> animais) {
-    // this.animais = animais;
-    // }
-
     public void adicionarEspecialidade(String especialidade) {
         this.especialidades.add(especialidade);
     }
@@ -75,6 +67,19 @@ public class PrestadorServicos extends Usuario {
         retorno += '}';
 
         return retorno;
+    }
+
+    public void caminharComAnimal(Animal animal) {
+        System.out.println(
+                "Prestador de serviço " + this.getName() + " passeando com o animal " + animal.getName() + "..");
+        animal.walk();
+    }
+
+    public void alimentarAnimal(Animal animal, Food food) {
+        System.out
+                .println("Prestador de serviço " + this.getName() + " alimentando o animal " + animal.getName() + "..");
+
+        animal.eat(food);
     }
 
 }

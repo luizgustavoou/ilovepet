@@ -18,7 +18,7 @@ public class Rato extends Animal {
     }
 
     @Override
-    void walk() {
+    public void walk() {
         int newEnergy = this.getEnergy() - 10;
 
         if (newEnergy < 0) {
@@ -31,13 +31,13 @@ public class Rato extends Animal {
     }
 
     @Override
-    void eat(Food food) {
-        int energy = getEnergy();
-        if (energy <= 100) {
-            System.out.println("Rato comendo...");
-            setEnergy(energy + food.getNutrition());
+    public void eat(Food food) {
+        int newEnergy = getEnergy() + food.getNutrition();
+        if (newEnergy <= 100) {
+            System.out.println("Rato " + this.getName() + " comendo...");
+            setEnergy(newEnergy);
         } else
-            System.out.println("Rato já está cheio de refeições!");
+            System.out.println("Rato " + this.getName() + " já está cheio de refeições!");
     }
 
     @Override
