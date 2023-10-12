@@ -43,12 +43,12 @@ public class LovePetController {
         return vendedor.getId();
     }
 
-    public void addEspecialidadePrestadorServico(String name, int age, String novaEspecialidade) {
+    public void addEspecialidadePrestadorServico(int id, String novaEspecialidade) {
         for (PrestadorServicos prestadorServicos : this.prestadorServicoRepository.getAll()) {
-            if (prestadorServicos.getName() == name && prestadorServicos.getAge() == age) {
+            if (prestadorServicos.getId() == id) {
                 prestadorServicos.adicionarEspecialidade(novaEspecialidade);
 
-                System.out.println("Especialidade do prestador de serviço " + name + " adicionado com sucesso.");
+                System.out.println("Especialidade do prestador de serviço " + prestadorServicos.getName() + " adicionado com sucesso.");
 
                 break;
             }

@@ -11,9 +11,9 @@ public class Main {
         int idPrestadorServico1 = lovePetController.addPrestadorServico("Luiz", 22);
         int idPrestadorServico2 = lovePetController.addPrestadorServico("Joab", 21);
 
-        lovePetController.addEspecialidadePrestadorServico("Luiz", 22, "cachorro");
-        lovePetController.addEspecialidadePrestadorServico("Joab", 21, "pato");
-        lovePetController.addEspecialidadePrestadorServico("Joab", 21, "coruja");
+        lovePetController.addEspecialidadePrestadorServico(idPrestadorServico1, "cachorro");
+        lovePetController.addEspecialidadePrestadorServico(idPrestadorServico2, "pato");
+        lovePetController.addEspecialidadePrestadorServico(idPrestadorServico2, "coruja");
 
         int idTutor1 = lovePetController.addTutor("Patricia", 47);
         lovePetController.addAnimacaoEstimacaoTutor(idTutor1, new Gato("Dolores", 6));
