@@ -2,8 +2,8 @@ package ilovepet.models;
 
 public class Gato extends Animal {
 
-    public Gato(int id, String name, int age, int energy) {
-        super(id, name, age, energy);
+    public Gato(int id, String name, int age) {
+        super(id, name, age);
     }
 
     @Override

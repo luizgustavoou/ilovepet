@@ -9,6 +9,7 @@ import ilovepet.repositories.TutorRepository;
 import ilovepet.repositories.VendedorRepository;
 
 //TODO: Nao eh responsabilidade do controller implementar uma funcao de relatorio, deixar isso para uma outra classe
+//TODO: Injetar depedencia de prestadorServicoRepository, tutorRepository, vendedorRepository
 public class LovePetController {
     private PrestadorServicoRepository prestadorServicoRepository;
     private TutorRepository tutorRepository;
