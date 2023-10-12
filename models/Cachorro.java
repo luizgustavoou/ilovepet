@@ -2,8 +2,8 @@ package ilovepet.models;
 
 public class Cachorro extends Animal {
 
-    public Cachorro(int id, String name, int age, int quantityMeals) {
-        super(id, name, age, quantityMeals);
+    public Cachorro(int id, String name, int age, int energy) {
+        super(id, name, age, energy);
     }
 
     @Override
@@ -12,11 +12,11 @@ public class Cachorro extends Animal {
     }
 
     @Override
-    void eat() {
-        int quantMeals = getQuantityMeals();
-        if(quantMeals <= 2) {
+    void eat(Food food) {
+        int energy = getEnergy();
+        if(energy <= 2) {
             System.out.println("Cachorro comendo...");
-            setQuantityMeals(quantMeals + 1);
+            setEnergy(energy + 1);
         }
         else
             System.out.println("Cachorro já teve 2 refeições!");
@@ -28,7 +28,7 @@ public class Cachorro extends Animal {
                 "id=" + this.getId() +
                 ", name=" + this.getName() +
                 ", age='" + this.getAge() +
-                ", quantityMeals=" + this.getQuantityMeals() + '\'' +
+                ", energy=" + this.getEnergy() + '\'' +
                 '}';
     }
     

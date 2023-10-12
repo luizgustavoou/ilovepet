@@ -4,13 +4,13 @@ public abstract class Animal {
     private int id;
     private String name;
     private int age;
-    private int quantityMeals = 0;
+    private int energy = 0;
 
-    public Animal(int id, String name, int age, int quantityMeals) {
-        this.it = id;
+    public Animal(int id, String name, int age, int energy) {
+        this.id = id;
         this.name = name;
         this.age = age;
-        this.quantityMeals = quantityMeals;
+        this.energy = energy;
     }
 
     public int getId() {
@@ -37,17 +37,17 @@ public abstract class Animal {
         this.age = age;
     }
 
-    public int getQuantityMeals() {
-        return quantityMeals;
+    public int getEnergy() {
+        return energy;
     }
 
-    public void setQuantityMeals(int quantityMeals) {
-        this.quantityMeals = quantityMeals;
+    public void setEnergy(int energy) {
+        this.energy = energy;
     }
 
     abstract void walk();
 
-    abstract void eat();
+    abstract void eat(Food food);
 
 
 
