@@ -11,14 +11,14 @@ Ações no Sistema: Pode se cadastrar no sistema, fornecer informações sobre s
 public class Tutor extends Usuario {
     private ArrayList<Animal> animaisEstimacao;
 
-    public Tutor(String name, int age, ArrayList<Animal> animaisEstimacao) {
-        super(name, age);
+    public Tutor(int id, String name, int age, ArrayList<Animal> animaisEstimacao) {
+        super(id, name, age);
         this.animaisEstimacao = animaisEstimacao;
 
     }
 
-    public Tutor(String name, int age) {
-        super(name, age);
+    public Tutor(int id, String name, int age) {
+        super(id, name, age);
         this.animaisEstimacao = new ArrayList<Animal>();
 
     }
@@ -38,7 +38,8 @@ public class Tutor extends Usuario {
     @Override
     public String toString() {
         String retorno = "Tutor{" +
-                "name=" + this.getName() +
+                "id=" + this.getId() +
+                ", name=" + this.getName() +
                 ", age='" + this.getAge() + '\'' + ", animaisEstimacao=[";
 
         for (Animal animal : this.animaisEstimacao) {

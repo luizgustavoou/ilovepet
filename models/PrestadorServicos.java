@@ -19,14 +19,14 @@ public class PrestadorServicos extends Usuario {
     // private ArrayList<Animal> animais;
     private ArrayList<String> especialidades;
 
-    public PrestadorServicos(String name, int age, ArrayList<String> especialidades) {
-        super(name, age);
+    public PrestadorServicos(int id, String name, int age, ArrayList<String> especialidades) {
+        super(id, name, age);
         // this.animais = animais;
         this.especialidades = especialidades;
     }
 
-    public PrestadorServicos(String name, int age) {
-        super(name, age);
+    public PrestadorServicos(int id, String name, int age) {
+        super(id, name, age);
         // this.animais = animais;
         this.especialidades = new ArrayList<String>();
     }
@@ -58,7 +58,8 @@ public class PrestadorServicos extends Usuario {
     @Override
     public String toString() {
         String retorno = "PrestadorServicos{" +
-                "name=" + this.getName() +
+                "id=" + this.getId() +
+                ", name=" + this.getName() +
                 ", age='" + this.getAge() + '\'' + ", especialidades=[";
         
         for(String especialidade : this.especialidades) {

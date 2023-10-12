@@ -6,7 +6,7 @@ public abstract class Usuario {
     private int age;
     
     public Usuario(int id, String name, int age) {
-        this.it = id;
+        this.id = id;
         this.name = name;
         this.age = age;
     }

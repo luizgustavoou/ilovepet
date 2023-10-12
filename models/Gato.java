@@ -2,8 +2,8 @@ package ilovepet.models;
 
 public class Gato extends Animal {
 
-    public Gato(String name, int age) {
-        super(name, age);
+    public Gato(int id, String name, int age, int quantityMeals) {
+        super(id, name, age, quantityMeals);
     }
 
     @Override
@@ -25,8 +25,10 @@ public class Gato extends Animal {
     @Override
     public String toString() {
         return "Gato{" +
-                "name=" + this.getName() +
-                ", age='" + this.getAge() + '\'' +
+                "id=" + this.getId() +
+                ", name=" + this.getName() +
+                ", age='" + this.getAge() +
+                ", quantityMeals=" + this.getQuantityMeals() + '\'' +
                 '}';
     }
     

@@ -9,8 +9,8 @@ Ações no Sistema: Pode se cadastrar no sistema, gerenciar informações sobre 
  */
 public class Vendedor extends Usuario {
 
-    public Vendedor(String name, int age) {
-        super(name, age);
+    public Vendedor(int id, String name, int age) {
+        super(id, name, age);
     }
 
     public void venderBrinquedo() {
@@ -30,7 +30,8 @@ public class Vendedor extends Usuario {
     @Override
     public String toString() {
         return "Vendedor{" +
-                "name=" + this.getName() +
+                "id=" + this.getId() +
+                ", name=" + this.getName() +
                 ", age='" + this.getAge() + '\'' +
                 '}';
     }

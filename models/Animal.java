@@ -6,10 +6,11 @@ public abstract class Animal {
     private int age;
     private int quantityMeals = 0;
 
-    public Animal(int id, String name, int age) {
+    public Animal(int id, String name, int age, int quantityMeals) {
         this.it = id;
         this.name = name;
         this.age = age;
+        this.quantityMeals = quantityMeals;
     }
 
     public int getId() {
