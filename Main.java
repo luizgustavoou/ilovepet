@@ -18,8 +18,11 @@ public class Main {
         lovePetController.addTutor("Patricia", 47);
         lovePetController.addAnimacaoEstimacaoTutor("Patricia", 47, new Gato("Dolores", 6));
         lovePetController.addAnimacaoEstimacaoTutor("Patricia", 47, new Cachorro("Luccy", 18));
+        lovePetController.addAnimacaoEstimacaoTutor("Patricia", 47, new Cachorro("Pingo", 11));
+        lovePetController.addAnimacaoEstimacaoTutor("Patricia", 47, new Gato("Dumbo", 6));
 
         lovePetController.addVendedor("Joselma", 40);
+        lovePetController.addVendedor("Carlos", 40);
 
         lovePetController.relatorioPrestadorServico();
         lovePetController.relatorioTutor();

@@ -1,24 +1,14 @@
 package ilovepet.models;
 
 public abstract class Animal {
-    private int id;
     private String name;
     private int age;
     private int energy = 0;
 
-    public Animal(int id, String name, int age) {
-        this.id = id;
+    public Animal( String name, int age) {
         this.name = name;
         this.age = age;
         this.energy = 0;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {

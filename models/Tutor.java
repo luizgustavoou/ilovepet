@@ -9,16 +9,27 @@ Descrição: Um tutor de animal de estimação é alguém que possui um animal d
 Ações no Sistema: Pode se cadastrar no sistema, fornecer informações sobre seu animal de estimação, como espécie (cão, gato, coelho, rato), nome, idade, entre outros detalh
  */
 public class Tutor extends Usuario {
+    private static int nextId = 0;
+    private int id;
     private ArrayList<Animal> animaisEstimacao;
 
-    public Tutor(int id, String name, int age, ArrayList<Animal> animaisEstimacao) {
-        super(id, name, age);
+    public Tutor(String name, int age, ArrayList<Animal> animaisEstimacao) {
+        super(name, age);
         this.animaisEstimacao = animaisEstimacao;
+        this.id = nextId++;
 
     }
 
-    public Tutor(int id, String name, int age) {
-        super(id, name, age);
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Tutor(String name, int age) {
+        super(name, age);
         this.animaisEstimacao = new ArrayList<Animal>();
 
     }

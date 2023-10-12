@@ -1,9 +1,20 @@
 package ilovepet.models;
 
 public class Gato extends Animal {
+    private static int nextId = 0;
+    private int id;
 
-    public Gato(int id, String name, int age) {
-        super(id, name, age);
+    public Gato(String name, int age) {
+        super(name, age);
+        this.id = nextId++;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
@@ -14,11 +25,10 @@ public class Gato extends Animal {
     @Override
     void eat(Food food) {
         int energy = getEnergy();
-        if(energy <= 5) {
+        if (energy <= 5) {
             System.out.println("Gato comendo...");
             setEnergy(energy + 1);
-        }
-        else
+        } else
             System.out.println("Gato já teve 5 refeições!");
     }
 
@@ -31,5 +41,5 @@ public class Gato extends Animal {
                 ", energy=" + this.getEnergy() + '\'' +
                 '}';
     }
-    
+
 }

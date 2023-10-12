@@ -8,9 +8,20 @@ Ações no Sistema: Pode se cadastrar no sistema, gerenciar informações sobre 
  * 
  */
 public class Vendedor extends Usuario {
+    private static int nextId = 0;
+    private int id;
 
-    public Vendedor(int id, String name, int age) {
-        super(id, name, age);
+    public Vendedor(String name, int age) {
+        super(name, age);
+        this.id = nextId++;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void venderBrinquedo() {
