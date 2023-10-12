@@ -29,16 +29,17 @@ public class Main {
         lovePetController.addEspecialidadePrestadorServico(prestadorServico2.getId(), "pato");
         lovePetController.addEspecialidadePrestadorServico(prestadorServico2.getId(), "coruja");
 
-        // Adicionar animais dus tutores
+        // Adicionar animais dos tutores
         lovePetController.addAnimacaoEstimacaoTutor(tutor1.getId(), new Gato("Dolores", 6));
         lovePetController.addAnimacaoEstimacaoTutor(tutor1.getId(), new Cachorro("Luccy", 18));
         lovePetController.addAnimacaoEstimacaoTutor(tutor1.getId(), new Cachorro("Pingo", 11));
         lovePetController.addAnimacaoEstimacaoTutor(tutor1.getId(), new Gato("Dumbo", 6));
 
         // Prestadores de serviço alimentar ou andar com os animais
-        lovePetController.alimentarAnimalPrestadorServico(prestadorServico2.getId(),
-                tutor1.getAnimaisEstimacao().get(0), new Sausage());
+        lovePetController.alimentarAnimalPrestadorServico(prestadorServico2.getId(), tutor1.getAnimaisEstimacao().get(0), new Sausage());
         lovePetController.passearAnimalPrestadorServico(prestadorServico1.getId(), tutor1.getAnimaisEstimacao().get(0));
+        lovePetController.alimentarAnimalPrestadorServico(prestadorServico1.getId(), tutor1.getAnimaisEstimacao().get(1), new Sausage());
+        lovePetController.passearAnimalPrestadorServico(prestadorServico2.getId(), tutor1.getAnimaisEstimacao().get(1));
 
         // Emitir relatorio dos prestadores de serviço, tutor e vendedor
         lovePetController.relatorioPrestadorServico();
