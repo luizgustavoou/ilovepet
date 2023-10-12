@@ -19,7 +19,15 @@ public class Gato extends Animal {
 
     @Override
     void walk() {
+        int newEnergy = this.getEnergy() - 10;
+
+        if (newEnergy < 0) {
+            System.out.println("Miau, não posso andar.");
+            return;
+        }
+
         System.out.println("Gato andando...");
+        this.setEnergy(newEnergy);
     }
 
     @Override

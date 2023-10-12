@@ -19,7 +19,15 @@ public class Coelho extends Animal {
 
     @Override
     void walk() {
+        int newEnergy = this.getEnergy() - 10;
+
+        if (newEnergy < 0) {
+            System.out.println("Fufu, não posso andar.");
+            return;
+        }
+
         System.out.println("Coelho andando...");
+        this.setEnergy(newEnergy);
     }
 
     @Override
