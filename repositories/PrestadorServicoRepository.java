@@ -7,7 +7,7 @@ import ilovepet.models.PrestadorServicos;
 public class PrestadorServicoRepository implements IRepository<PrestadorServicos> {
     private ArrayList<PrestadorServicos> prestadoresServico = new ArrayList<PrestadorServicos>();
 
-    private static PrestadorServicoRepository instance;
+    static private PrestadorServicoRepository instance;
 
     private PrestadorServicoRepository() {
     }

@@ -7,7 +7,7 @@ import ilovepet.models.Vendedor;
 public class VendedorRepository implements IRepository<Vendedor> {
     private ArrayList<Vendedor> vendedores = new ArrayList<Vendedor>();
 
-    private static VendedorRepository instance;
+    static private VendedorRepository instance;
 
     private VendedorRepository() {
     }

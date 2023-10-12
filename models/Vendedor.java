@@ -8,7 +8,7 @@ Ações no Sistema: Pode se cadastrar no sistema, gerenciar informações sobre 
  * 
  */
 public class Vendedor extends Usuario {
-    private static int nextId = 0;
+    static private int nextId = 0;
     private int id;
 
     public Vendedor(String name, int age) {

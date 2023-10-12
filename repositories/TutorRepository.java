@@ -8,7 +8,7 @@ import ilovepet.models.Tutor;
 public class TutorRepository implements IRepository<Tutor> {
     private ArrayList<Tutor> Tutores = new ArrayList<Tutor>();
 
-    private static TutorRepository instance;
+    static private TutorRepository instance;
 
     private TutorRepository() {
     }

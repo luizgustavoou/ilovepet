@@ -11,7 +11,7 @@ Ações no Sistema: Pode se cadastrar no sistema, fornecer informações sobre s
  * 
  */
 public class PrestadorServicos extends Usuario {
-    private static int nextId = 0;
+    static private int nextId = 0;
     private int id;
 
     private ArrayList<String> especialidades;

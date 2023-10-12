@@ -1,7 +1,7 @@
 package ilovepet.models;
 
 public class Gato extends Animal {
-    private static int nextId = 0;
+    static private int nextId = 0;
     private int id;
 
     public Gato(String name, int age) {
